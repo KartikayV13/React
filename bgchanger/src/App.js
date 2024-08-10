@@ -9,7 +9,7 @@ function App() {
   return (
 <div className='hero'>
   <div className='container' style={{backgroundColor : color}} >
-    <h1>BG Changer</h1>
+    <h1>Hello Coder</h1>
   </div>
   <div className='btns'>
     <div className='bar'>

@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 15px;
+    background: #72de74;
+    border-radius: 25px;
+    flex-direction: column;
+}
+.quoteText{
+    padding: 15px;
+    font-size: 25px;
+color:white;
+
+}
+
+.line{
+    line-height: 1;
+    color: black
+}
+.quoteAuthor{
+    color :white;
+    font-size: 20px;
+    padding: 15px;
+    display: flex;
+    margin-left: 80%;
+    justify-content: end;
+}
