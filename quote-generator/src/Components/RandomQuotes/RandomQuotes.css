@@ -22,8 +22,19 @@ color:white;
 .quoteAuthor{
     color :white;
     font-size: 20px;
-    padding: 15px;
+    /* padding: 15px; */
     display: flex;
-    margin-left: 80%;
+    flex-direction: column;
+    margin-left: 60%;
     justify-content: end;
+}
+.icon{
+   padding: 5px;
+    /* padding-top: 25px; */
+    color: rgb(255, 245, 245);
+    font-weight: 900;
+    /* border: 1px solid white; */
+    border-radius: 10px;
+    width: auto;
+    background: #000;
 }
