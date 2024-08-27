@@ -1,8 +1,37 @@
 .board-row{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 .board-container{
-    margin: 100px;
+    margin: 50px;
+   border: 1px solid black;
+   padding: 5px;
+   background-color: #0033ff7e;
+   -webkit-border-radius: 44px;
+   border-radius: 20px;
+   -webkit-box-shadow: 9px 9px 8px #0000007e, -9px -9px 8px #000000;
+   box-shadow: 9px 9px 8px #0000007e, -9px -9px 8px #faf2f2;
+}
+.result{
+   font-size: 2rem;
+   font-weight: 900;
+}
+p{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+p button{
+    border-radius: 20px;
+    font-size: larger;
+    margin-top: 50px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: black;
+    background: rgb(84, 77, 77);
 }
