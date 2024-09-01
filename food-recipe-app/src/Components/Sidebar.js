@@ -1,18 +1,28 @@
-import React from 'react'
-import "../Styles/Sidebar.css"
+import React from "react";
+import "../Styles/Sidebar.css";
+import { Link, useLocation } from "react-router-dom";
 
+const Sidebar = ({ links, close }) => {
+  const location = useLocation();
 
-const Sidebar = ({links , close}) => {
   return (
-    <div className='sidebar' onClick={close}>
+    <div className="sidebar" onClick={close}>
       {links.map((link) => (
-        <a className='sidebar-link' href="#!" key={link.name}>
-         <span className='sidebar-icons'> {link.icon} </span>
+        <Link
+          to={link.path}
+          className={
+            location.pathname === link.path
+              ? "sidebar-link active"
+              : "sidebar-link"
+          }
+          key={link.name}
+        >
+          <span className="sidebar-icons"> {link.icon} </span>
           {link.name}
-          </a>
+        </Link>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

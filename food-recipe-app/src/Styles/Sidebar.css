@@ -36,8 +36,8 @@
   animation-delay: 0.3s;
 }
 
-.sidebar-link .active {
-  border-left-color: 0.4em solid var(--primary-color);
+.sidebar-link.active {
+  border-left-color: var(--primary-color);
 }
 .sidebar-link .sidebar-icons {
   color: black;
@@ -61,9 +61,8 @@
   }
 }
 
-/* @media screen and (max-width: 760px) {
-
-    .sidebar{
-        display: block;
-    }
-} */
+@media screen and (min-width: 761px) {
+  .sidebar {
+    display: none;
+  }
+}

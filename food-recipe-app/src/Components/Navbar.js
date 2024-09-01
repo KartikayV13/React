@@ -5,9 +5,12 @@ import Sidebar from "./Sidebar";
 import { FaHome } from "react-icons/fa";
 import { FaListUl } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [showSideBar, setShowSideBar] = useState(false);
+
+  const location = useLocation();
 
   const links = [
     {
@@ -34,16 +37,20 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar container">
-        <a href="#!" className="logo">
-          {" "}
+        <Link to={"/"} className="logo">
           San<span>ji's-Re</span>cipe
-        </a>
+        </Link>
 
         <div className="nav-link">
           {links.map((link) => (
-            <a href="#!" key={link.name}>
+            <Link
+              className={location.pathname === link.path ? " active" : ""}
+              to={link.path}
+              href="#!"
+              key={link.name}
+            >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div

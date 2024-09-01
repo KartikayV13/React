@@ -1,24 +1,27 @@
 import "./App.css";
-import ChiefSection from "./Components/ChiefSection";
 import Footer from "./Components/Footer";
-import Herosection from "./Components/Herosection";
-import Imporveskills from "./Components/Imporveskills";
+import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
-import Quotesection from "./Components/Quotesection";
+import Settings from "./Pages/Settings";
+import Recipes from "./Pages/Recipes";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <div className="App">
-        <Navbar />
-        <div className="container main">
-          <Herosection />
-          <Imporveskills />
-          <Quotesection />
-          <ChiefSection />
+      <Router>
+        <div className="App">
+          <Navbar />
+          <div className="container main">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/recipes" element={<Recipes />} />
+              <Route path="/settings" element={<Settings />} />
+            </Routes>
+          </div>
           <Footer />
         </div>
-      </div>
+      </Router>
     </>
   );
 }
