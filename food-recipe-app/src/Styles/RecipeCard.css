@@ -1,0 +1,30 @@
+.recipe-card {
+  border-radius: 10px;
+  /* padding: 10px; */
+  overflow: hidden;
+  box-shadow: 0px 6px 15px var(--shadow-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 1.5em;
+}
+.card-img {
+  width: 100%;
+  /* border: 1px solid black; */
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 6px 6px var(--shadow-color);
+}
+
+.card-details {
+  padding: 0 0 10px 0;
+}
+
+.dish-name {
+  padding: 5px;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+button {
+  padding: 5px;
+  margin: 10px;
+}
