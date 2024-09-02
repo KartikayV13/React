@@ -1,5 +1,6 @@
 .recipe-page {
   /* width: 100%; */
+  /* height: 58.2vh; */
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -73,4 +74,25 @@ input {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: 1.5em;
+}
+.sorry {
+  /* border: 2px solid black; */
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 40%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.sorry img {
+  width: 200px;
+  filter: drop-shadow(5px 5px 15px #222);
+}
+.sry-text {
+  font-size: 2rem;
+  margin-left: -20%;
+  font-weight: 700;
+  font-family: cursive;
+  filter: drop-shadow(5px 5px 15px #f10000);
 }

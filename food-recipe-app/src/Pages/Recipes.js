@@ -36,9 +36,14 @@ const Recipes = () => {
       <div className="recipe-page">
         <PreviousSearches onSearch={handleSearch} />
         <div className="recipe-container">
-          {data.map((meal, index) => (
-            <ReciepeCard key={index} meal={meal} />
-          ))}
+          {data.length > 0 ? (
+            data.map((meal, index) => <ReciepeCard key={index} meal={meal} />)
+          ) : (
+            <div className="sorry">
+              <img src="/Image/Sorry/Minions.png" alt="img" />
+              <p className="sry-text">" You can try somthing"</p>
+            </div>
+          )}
         </div>
       </div>
     </>

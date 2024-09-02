@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.ingridient-container {
+  padding: 50px;
+}
+.detail-box {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+}
+.detail-img {
+  width: 407px;
+  height: 400px;
+  margin-top: 70px;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px var(--shadow-color);
+}
+.name-ingridient {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  line-height: 1.5;
+  width: 500%;
+}
+.name-ingridient p {
+  width: 150%;
+  color: var(--text-color);
+  font-size: 1.2em;
+  font-family: monospace;
+  font-weight: 600;
+}
+.name {
+  display: inline;
+  padding: 10px;
+  color: var(--text-color);
+  filter: drop-shadow(2px 2px 5px #f10000);
+  border-radius: 20px;
+}
+
+.detail-ingridient b {
+  margin-top: 60px;
+  font-size: 2em;
+  /* padding: 10px; */
+}
