@@ -73,7 +73,10 @@ input {
 .recipe-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-gap: 1.5em;
+  justify-items: center; /* Center items horizontally */
+  align-items: start; /* Align items to the top of the grid cells */
+  width: 100%; /* Ensure the grid container takes full width */
+  gap: 1.5em;
 }
 .sorry {
   /* border: 2px solid black; */
@@ -85,13 +88,35 @@ input {
   justify-content: center;
   text-align: center;
 }
-.sorry img {
+.sry-img {
   width: 200px;
-  filter: drop-shadow(5px 5px 15px #222);
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 .sry-text {
   font-size: 2rem;
   margin-left: -20%;
+  font-weight: 700;
+  font-family: cursive;
+  filter: drop-shadow(5px 5px 15px #f10000);
+}
+.search {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.search-img {
+  width: 200px;
+  height: 400px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+.search-text {
+  font-size: 2rem;
+  /* margin-left: -20%; */
   font-weight: 700;
   font-family: cursive;
   filter: drop-shadow(5px 5px 15px #f10000);

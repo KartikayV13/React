@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Herosection.css";
+import { Link } from "react-router-dom";
 import CustomImage from "./CustomImage";
 
 const Herosection = () => {
@@ -24,7 +25,9 @@ const Herosection = () => {
           with delicious food recepies of all the cuisine. And our servised is
           absolutely free. so start exploring now
         </p>
-        <button className="btn">Explore Now</button>
+        <Link className="explore" to={"/recipes"}>
+          <button className="btn">Explore Now</button>
+        </Link>
       </div>
       <div className="col gallery">
         {images.map((src, index) => (

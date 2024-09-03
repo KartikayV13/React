@@ -31,6 +31,9 @@
 .btn:hover {
   box-shadow: 0 1px 3px var(--shadow-color);
 }
+.explore {
+  text-decoration: none;
+}
 
 .title {
   color: var(--text-color);
@@ -56,6 +59,9 @@
     flex-wrap: wrap;
     text-align: left;
     margin-bottom: 3vw;
+  }
+  .btn {
+    text-decoration: none;
   }
   .hero .gallery {
     grid-template-columns: repeat(3, 1fr);

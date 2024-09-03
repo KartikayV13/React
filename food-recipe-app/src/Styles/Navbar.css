@@ -109,20 +109,41 @@
   .container {
     padding-inline: 6vw;
   }
+  .btn {
+    text-decoration: none;
+  }
 }
 @media screen and (max-width: 1280px) {
   .container {
     padding-inline: 10vw;
+  }
+  .btn {
+    text-decoration: none;
+  }
+  .explore {
+    text-decoration: none;
   }
 }
 @media screen and (max-width: 1050px) {
   .container {
     padding-inline: 8vw;
   }
+  .btn {
+    text-decoration: none;
+  }
+  .explore {
+    text-decoration: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .container {
     padding-inline: 4vw;
+  }
+  .btn {
+    text-decoration: none;
+  }
+  .explore {
+    text-decoration: none;
   }
 }
