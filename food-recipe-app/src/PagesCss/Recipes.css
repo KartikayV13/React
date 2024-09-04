@@ -90,12 +90,14 @@ input {
 }
 .sry-img {
   width: 200px;
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
+  color: var(--text-color);
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 .sry-text {
   font-size: 2rem;
   margin-left: -20%;
+  color: var(--text-color);
   font-weight: 700;
   font-family: cursive;
   filter: drop-shadow(5px 5px 15px #f10000);
@@ -118,6 +120,7 @@ input {
   font-size: 2rem;
   /* margin-left: -20%; */
   font-weight: 700;
+  color: var(--text-color);
   font-family: cursive;
   filter: drop-shadow(5px 5px 15px #f10000);
 }

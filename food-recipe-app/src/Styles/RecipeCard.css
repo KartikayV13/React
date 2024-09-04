@@ -29,6 +29,7 @@
 
 .dish-name {
   padding: 5px;
+  color: var(--text-color);
   margin-top: 10px;
   font-size: 1.3em;
   font-weight: 900;
