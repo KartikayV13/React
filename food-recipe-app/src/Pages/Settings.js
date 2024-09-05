@@ -4,7 +4,35 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 
 const Settings = () => {
-  const [settings, setSettings] = useState({
+  const primaryColors = [
+    // yellow
+    "rgb(255,215,9)",
+    // red
+    "rgb(255,0,0)",
+    //  sky blue
+    "rgb(0,191,255)",
+    //lime green
+    "rgb(0,255,0)",
+    //dark maganta
+    "rgb(139,0,139)",
+  ];
+
+  const fontSizes = [
+    {
+      title: "Small",
+      value: "12px",
+    },
+    {
+      title: "Medium",
+      value: "16px",
+    },
+    {
+      title: "Large",
+      value: "20px",
+    },
+  ];
+
+  const defaultSettings = {
     "--background-color": "#fff",
     "--background-light": "#fff",
     "--shadow-color": "rgba(0, 0, 0, 0.2)",
@@ -13,6 +41,12 @@ const Settings = () => {
     "--text-light": "#575757",
     "--font-size": "16px",
     "--animation-speed": 1,
+  };
+
+  // Load settings from localStorage if available, else default
+  const [settings, setSettings] = useState(() => {
+    const savedSettings = localStorage.getItem("settings");
+    return savedSettings ? JSON.parse(savedSettings) : defaultSettings;
   });
 
   useEffect(() => {
@@ -20,9 +54,13 @@ const Settings = () => {
     for (let key in settings) {
       root.style.setProperty(key, settings[key]);
     }
+    localStorage.setItem("settings", JSON.stringify(settings));
   }, [settings]);
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme || "light";
+  });
   const themes = [
     {
       "--background-light": "#fff",
@@ -50,6 +88,7 @@ const Settings = () => {
       _settings[key] = _theme[key];
     }
     setSettings(_settings);
+    localStorage.setItem("theme", i === 0 ? "light" : "dark");
   };
 
   const changeColor = (i) => {
@@ -58,45 +97,27 @@ const Settings = () => {
     _settings["--primary-color"] = _color;
     setPrimaryColor(i);
     setSettings(_settings);
+    localStorage.setItem("primaryColor", i);
   };
 
-  const [primaryColor, setPrimaryColor] = useState(1);
-  const primaryColors = [
-    // yellow
-    "rgb(255,255,0)",
-    // red
-    "rgb(255,0,0)",
-    //  sky blue
-    "rgb(0,191,255)",
-    //lime green
-    "rgb(0,255,0)",
-    //dark maganta
-    "rgb(139,0,139)",
-  ];
+  const [primaryColor, setPrimaryColor] = useState(() => {
+    const savedColor = localStorage.getItem("primaryColor");
+    return savedColor ? parseInt(savedColor) : 1; //we used parseInt bcz the data was in array
+  });
 
-  const [fontSize, setFontSize] = useState(1);
+  const [fontSize, setFontSize] = useState(() => {
+    const savedFontSize = localStorage.getItem("fontSize");
+    return savedFontSize ? parseInt(savedFontSize) : 1;
+  });
+
   const changeFontSize = (i) => {
     const _size = fontSizes[i];
     let _settings = { ...settings };
     _settings["--font-size"] = _size.value;
     setFontSize(i);
     setSettings(_settings);
+    localStorage.setItem("fontSize", i);
   };
-
-  const fontSizes = [
-    {
-      title: "Small",
-      value: "12px",
-    },
-    {
-      title: "Medium",
-      value: "16px",
-    },
-    {
-      title: "Large",
-      value: "20px",
-    },
-  ];
 
   return (
     <div>
