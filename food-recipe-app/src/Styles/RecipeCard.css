@@ -17,7 +17,8 @@
 .card-img:hover {
   opacity: 0.8;
 }
-NavLink {
+
+.NavLink {
   text-decoration: none;
 }
 

@@ -16,7 +16,7 @@ const ReciepeCard = ({ meal }) => {
           />
           <p className="dish-name">{meal.strMeal}</p>
 
-          <NavLink to={`/ingridients/${meal.idMeal}`}>
+          <NavLink className="NavLink" to={`/ingridients/${meal.idMeal}`}>
             <button className="btn">Details</button>
           </NavLink>
         </div>
