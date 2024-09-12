@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useAppContext } from "../../UseConstextHook/UseContextApi";
-import { useTheme } from "../../UseConstextHook/UseTheme";
-import { fetchApiForYoutubeData } from "../../Utils/FetchApi";
-import { formatPublishTime, formatViewCount } from "../../Utils/helper";
+import { useAppContext } from "../../useContextHook/useContextApi";
+import { useTheme } from "../../useContextHook/useTheme";
+import { fetchApiForYoutubeData } from "../../utils/fetchApi";
+import { formatPublishTime, formatViewCount } from "../../utils/helper";
+import { FaDownload, FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 import VideoComments from "./VideoComments";
 import RelatedVideos from "./RelatedVideos";
-
-import { FaDownload, FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 
 const VideoDetails = () => {
   const { categoryId, videoId } = useParams();
   const { setLoading } = useAppContext();
   const { isDarkMode } = useTheme();
   const [selectedVideoDetails, setSelectedVideoDetails] = useState();
-  const [showFullDescription, setShowFullDescription] = useState();
+  const [showFullDescription, setShowFullDescription] = useState(false);
   const [channelData, setChannelData] = useState();
   const [commentData, setCommentData] = useState();
 
@@ -85,8 +84,8 @@ const VideoDetails = () => {
         isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black "
       }`}
     >
-      <div className="w-full flex flex-col  p-4 lg:flex-row lg:space-x-4">
-        <div className="flex flex-col lg:w-[65%]  px-4 py-3 lg:py-6 overflow-auto">
+      <div className="w-full flex flex-col p-4 lg:flex-row lg:space-x-4">
+        <div className="flex flex-col lg:w-[65%] px-4 py-3 lg:py-6 overflow-auto">
           <div className="h-[300px] md:h-[450px] lg:h-[500px] xl:h-[600px] ml-[-16px] lh:ml-0 mr-[-16px] lg:mr-0">
             <iframe
               width="100%"
@@ -121,7 +120,6 @@ const VideoDetails = () => {
                         isDarkMode ? "text-gray-200" : "text-gray-700"
                       }`}
                     >
-                      {" "}
                       {formatViewCount(
                         channelData?.statistics?.subscriberCount
                       )}{" "}
@@ -151,6 +149,7 @@ const VideoDetails = () => {
                     <div className="h-5 w-[1px] bg-gray-400 mx-2"></div>
                     <FaThumbsDown />
                   </button>
+
                   <button
                     className={` flex items-center space-x-2 rounded-full px-4 py-2 md:px-6 md:py-3  ${
                       isDarkMode ? "bg-black" : "bg-slate-200"
