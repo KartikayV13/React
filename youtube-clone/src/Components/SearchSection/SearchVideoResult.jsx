@@ -41,54 +41,6 @@ const SearchVideoResult = () => {
 
   return (
     <div className="flex w-full h-full">
-      <div className="flex w-full h-full">
-        <div className="flex-shrink-0 overflow-y-auto">
-          <SideBar />
-        </div>
-        <div
-          className={`flex-grow overflow-y-auto ${
-            isDarkMode ? "bg-gray-900 text-gray-300" : "bg-white text-gray-800"
-          }`}
-        >
-          <div className="p-4">
-            {searchResult?.map((result) => (
-              <div className="flex flex-col md:flex-row mb-8">
-                <Link to={`/video/${result?.snippet?.categoryId}/${result.id}`}>
-                  <img
-                    src={result?.snippet?.thumbnails.medium?.url}
-                    alt={result?.snippet?.title}
-                    className="w-full h-auto object-cover rounded-md mb-2"
-                  />
-                </Link>
-                <div className="md:ml-4 md:w-2/3">
-                  <h3 className="text=lg font-bold">
-                    {result?.snippet?.title}
-                  </h3>
-                  <div
-                    className={`text-sm ${
-                      isDarkMode ? "text-gray-400" : "text-gray-600"
-                    }`}
-                  >
-                    {result?.snippet?.channelTitle}
-                  </div>
-                  <div
-                    className={`text-xs ${
-                      isDarkMode ? "text-gray-400" : "text-gray-600"
-                    }`}
-                  >
-                    {formatViewCount(result?.statistics?.viewCount)} views .{" "}
-                    {formatPublishTime(result?.snippet?.publishedAt)}
-                  </div>
-
-                  <p className="mt-2">
-                    {result?.snippet?.description.slice(0, 100)}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
       <div className="flex-shrink-0 overflow-y-auto">
         <SideBar />
       </div>
