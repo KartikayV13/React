@@ -5,7 +5,7 @@ import { useTheme } from "../../UseConstextHook/UseTheme";
 import { fetchApiForYoutubeData } from "../../Utils/FetchApi";
 import { formatPublishTime, formatViewCount } from "../../Utils/helper";
 import VideoComments from "./VideoComments";
-import RelatedVideos from "./RelatedVideos";
+import RelatedVideo from "./RelatedVideo";
 
 import { FaDownload, FaThumbsDown, FaThumbsUp } from "react-icons/fa";
 
@@ -54,7 +54,7 @@ const VideoDetails = () => {
       const data = await fetchApiForYoutubeData(`commentThreads`, {
         part: "snippet",
         videoId: videoId,
-        maxResults: 10,
+        maxResults: 5,
       });
       setCommentData(data?.items);
     } catch (error) {
@@ -199,7 +199,7 @@ const VideoDetails = () => {
         </div>
         <div className="lg:w-[35%] p-4">
           <h3 className="text-xl font-bold mb-4">Related Videos</h3>
-          <RelatedVideos categoryId={categoryId} />
+          <RelatedVideo categoryId={categoryId} />
         </div>
       </div>
     </div>
