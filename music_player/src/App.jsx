@@ -1,13 +1,18 @@
 import { useState } from "react";
-
-import "./App.css";
+import SideBar from "./Components/SideBar";
+import Player from "./Components/Player";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1 className="text-3xl font-bold ">Hello world!</h1>
+      <div className=" h-screen bg-black">
+        <div className="h-[90%] flex">
+          <SideBar />
+        </div>
+        <Player/>
+      </div>
     </>
   );
 }

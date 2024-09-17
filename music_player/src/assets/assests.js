@@ -4,12 +4,17 @@ import rahat_img from "./Back-2-Love.jpg";
 import honey_img from "./HoneySingh.jpg";
 import kk_img from "./kk_img.jpg";
 import fav_img from "./Fav_img.jpg";
+import Logo from "./Music.png";
+
+export const assets = {
+  Logo,
+};
 
 //import Atifsongs
 import atifS1 from "./Atif/01DilDiyangalla.mp3";
 import atifS2 from "./Atif/02JeenaJeena.mp3";
 import atifS3 from "./Atif/03JeeneLagaHoon.mp3";
-import atifS4 from "./Atif/04JudoHokeBhi.mp3";
+import atifS4 from "./Atif/04JudaHokeBhi.mp3";
 import atifS5 from "./Atif/05MarJaayen(Reprise).mp3";
 import atifS6 from "./Atif/06RaftaRaftaSanam.mp3";
 import atifS7 from "./Atif/07RaftaRafta.mp3";
@@ -43,7 +48,7 @@ import RahatS10 from "./Rahat back to love/10FusionInRaag.mp3";
 
 //import Honey Songs
 import HoneyS1 from "./Honey singh/01BlueEyes.mp3";
-import HoneyS2 from "./Honey singh/02prtyWithBhoothnath.mp3";
+import HoneyS2 from "./Honey singh/02PartyWithBhoothnath.mp3";
 import HoneyS3 from "./Honey singh/03LungiDance.mp3";
 import HoneyS4 from "./Honey singh/04AngrejiBeat.mp3";
 import HoneyS5 from "./Honey singh/05DhireDhireSe.mp3";
@@ -96,7 +101,7 @@ export const atif_Songs = [
   },
   {
     id: 4,
-    name: "Mar Jaayen",
+    name: "Mar Jaayen (Reprise)",
     image: atif_img,
     file: atifS5,
     duration: "04:09",
@@ -423,5 +428,43 @@ export const fav_Songs = [
     image: fav_img,
     file: Fav10,
     duration: "04:03",
+  },
+];
+
+const albumData = [
+  {
+    id: 0,
+    name: "Atif Aslam Top10",
+    Image: atif_img,
+    desc: "Atif most popular",
+    bgColor: "#2a4365",
+  },
+  {
+    id: 1,
+    name: "K K Top10",
+    Image: kk_img,
+    desc: "K K most popular",
+    bgColor: "#22543d",
+  },
+  {
+    id: 2,
+    name: "Honey Sing Top10",
+    Image: honey_img,
+    desc: "Honey Singh most popular",
+    bgColor: "#742a2a",
+  },
+  {
+    id: 3,
+    name: "Rahat Fateh Ali Khan Top10",
+    Image: honey_img,
+    desc: "Rahat Fateh Ali Khan Back 2 Love Album",
+    bgColor: "#44337a",
+  },
+  {
+    id: 4,
+    name: "My Fav",
+    Image: fav_img,
+    desc: "My Favourite Songs",
+    bgColor: "#234e52",
   },
 ];
