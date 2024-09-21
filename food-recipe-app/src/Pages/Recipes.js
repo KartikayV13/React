@@ -21,6 +21,7 @@ const Recipes = () => {
       }
       const result = await response.json();
       setData(result.meals || []);
+      console.log(result);
     } catch (error) {
       console.error("Fetch error:", error);
     }
