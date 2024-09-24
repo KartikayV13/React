@@ -5,7 +5,8 @@ import AlbumItem from './AlbumItem'
 import {fav_Songs} from "../assets/assests"
 import FavSong from './FavSong'
 
-const DisplayHome = () => {
+const DisplayHome = ( ) => {
+
   return (
    <>
    <NavBar/>
@@ -20,7 +21,7 @@ const DisplayHome = () => {
     <h1 className='my-5 font-bold text-2xl'>Favourite List</h1>
     <div className="flex overflow-auto ">
       {fav_Songs.map((item , index) => (
-        <FavSong key={index} namer={item.name} id={item.id} image={item.image} />
+        <FavSong  key={index} name={item.name}  id={item.id} image={item.image} />
       ))}
     </div>
 

@@ -5,10 +5,11 @@ import './index.css'
 import {BrowserRouter } from "react-router-dom"
 import PlayerContextProvider from './Context/PlayerContext.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-    <PlayerContextProvider >
+    <PlayerContextProvider>
     <App />
     </PlayerContextProvider>
     </BrowserRouter>
