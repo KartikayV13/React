@@ -76,7 +76,7 @@ import kk09 from "./kk/KK_Image/kk09.jpg"
 import kk10 from "./kk/KK_Image/kk10.jpg" 
 
 //import Rahat Songs
-import RahatS1 from "./Rahat back to love/Rabjaane.mp3";
+import RahatS1 from "./Rahat back to love/RabJaane.mp3";
 import RahatS2 from "./Rahat back to love/Habibi.mp3";
 import RahatS3 from "./Rahat back to love/RimJhim.mp3";
 import RahatS4 from "./Rahat back to love/ZarooriTha.mp3";
