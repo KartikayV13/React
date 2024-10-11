@@ -8,7 +8,7 @@ import Logo from "./Music.png";
 
 //fav img
 import mereNishan from "./mereNishan.jpg"
-import jeenaJeena from "./jeenaJeena.jpg"
+import jeenaJeena from "./JeenaJeena.jpg"
 import hoSanna from "./hoSanna.jpg"
 import laboKo from "./laboKo.jpg"
 import dilIbadat from "./dilIbadat.jpg"
